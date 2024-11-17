@@ -11,10 +11,11 @@ dotenv.config();
 
 const app = express();
 
+app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
+
 app.use(express.json());
 app.use(cors());
 
-app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 app.use("/api/users", userRoutes);
 app.use("/api/cars", carRoutes);
 app.use("/api/upload", uploadRoutes);
