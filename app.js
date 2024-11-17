@@ -4,10 +4,14 @@ const userRoutes = require("./routes/userRoutes");
 const carRoutes = require("./routes/carRoutes");
 const uploadRoutes = require("./routes/uploadRoutes");
 const cors = require('cors');
+const swaggerUi = require('swagger-ui-express');
+const swaggerSpecs = require('./swagger');
 
 dotenv.config();
 
 const app = express();
+
+app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 
 app.use(express.json());
 app.use(cors());
