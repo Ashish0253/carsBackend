@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const userRoutes = require("./routes/userRoutes");
 const carRoutes = require("./routes/carRoutes");
 const uploadRoutes = require("./routes/uploadRoutes");
+const cors = require('cors');
 
 dotenv.config();
 
