@@ -13,8 +13,8 @@ const options = {
     },
     servers: [
       {
-        // url: 'http://localhost:5000',
-        url: process.env.PROD_URL,
+        url: 'http://localhost:5000',
+        // url: 'https://cars-backend-five.vercel.app',
       },
     ],
   },
